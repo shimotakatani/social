@@ -1,7 +1,9 @@
 package su.nikitos.social.services.Impl;
 
+import su.nikitos.social.engine.Game;
 import su.nikitos.social.services.GenericService;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Named;
 
 /**
@@ -13,6 +15,9 @@ import javax.inject.Named;
 @Named
 public class GenericServiceImpl implements GenericService{
 
+
+    private Game rabbitGame = new Game();
+
     /**
      * Возвращает значение ОК
      * @return "ОК"
@@ -21,5 +26,14 @@ public class GenericServiceImpl implements GenericService{
     @Override
     public String OkMessage() {
         return "Хорошо";
+    }
+
+    @PostConstruct
+    public void init(){
+        rabbitGame.run();
+    }
+
+    public String getGameSerilization(){
+        return rabbitGame.getGameSerilization();
     }
 }

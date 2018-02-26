@@ -14,4 +14,6 @@ public interface GenericService {
      * @author nponosov
      */
     String OkMessage();
+
+    String getGameSerilization();
 }
