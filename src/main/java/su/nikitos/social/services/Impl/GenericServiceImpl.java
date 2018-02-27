@@ -4,6 +4,7 @@ import su.nikitos.social.engine.Game;
 import su.nikitos.social.services.GenericService;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 /**

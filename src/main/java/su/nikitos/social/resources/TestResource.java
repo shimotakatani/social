@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import su.nikitos.social.dto.MessageDto;
 import su.nikitos.social.services.GenericService;
 
+import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 
 
@@ -19,7 +20,7 @@ import javax.ws.rs.core.Response;
 @RestController
 public class TestResource {
 
-    @Autowired
+    @Inject
     GenericService genericService;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)

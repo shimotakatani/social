@@ -6,6 +6,8 @@ import su.nikitos.social.engine.objects.GameStats;
 import su.nikitos.social.engine.objects.units.Rabbit;
 import su.nikitos.social.engine.tactor.Tactor;
 
+import javax.inject.Named;
+import javax.inject.Singleton;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,7 +29,6 @@ public class Game implements Runnable{
 
     @Override
     public void run() {
-
 
         while (!stats.isFinish) {
             //Обработка шагов игры
